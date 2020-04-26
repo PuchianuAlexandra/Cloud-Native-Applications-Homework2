@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server";
+
+package greet;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SendSign (SignRequest) returns (SignReply);
+}
+
+// The request message containing the user's name.
+message SignRequest {
+  string date = 1;
+}
+
+// The response message containing the greetings.
+message SignReply {
+  string zodiac = 1;
+}
